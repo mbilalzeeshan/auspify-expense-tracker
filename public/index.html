@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TallyUp - Personal Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== Top bar ===================== -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">&#9679;</span>
+      <span class="brand-name">TallyUp</span>
+      <span class="brand-tag">expense tracker</span>
+    </div>
+    <div class="topbar-right">
+      <span id="userBadge" class="user-badge hidden"></span>
+      <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===================== Auth view ===================== -->
+    <section id="authView" class="auth-view">
+      <div class="auth-card">
+        <h1>Take charge of your money</h1>
+        <p class="muted">Track income and expenses, see where your money goes, and stay on budget with TallyUp.</p>
+
+        <div class="tabs">
+          <button id="tabLogin" class="tab active" type="button">Log in</button>
+          <button id="tabRegister" class="tab" type="button">Create account</button>
+        </div>
+
+        <form id="loginForm" autocomplete="off">
+          <label>Email
+            <input type="email" id="loginEmail" required placeholder="you@example.com">
+          </label>
+          <label>Password
+            <input type="password" id="loginPassword" required placeholder="Your password">
+          </label>
+          <p class="form-error" id="loginError"></p>
+          <button class="btn btn-primary btn-block" type="submit">Log in</button>
+          <p class="demo-hint">Demo account: <code>demo@example.com</code> / <code>demo123</code></p>
+        </form>
+
+        <form id="registerForm" class="hidden" autocomplete="off">
+          <label>Name
+            <input type="text" id="regName" required placeholder="Your name">
+          </label>
+          <label>Email
+            <input type="email" id="regEmail" required placeholder="you@example.com">
+          </label>
+          <label>Password <span class="muted-small">(min 6 characters)</span>
+            <input type="password" id="regPassword" required minlength="6" placeholder="Choose a password">
+          </label>
+          <p class="form-error" id="regError"></p>
+          <button class="btn btn-primary btn-block" type="submit">Create account</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== App view ===================== -->
+    <section id="appView" class="hidden">
+
+      <!-- Summary cards -->
+      <div class="cards">
+        <div class="card income">
+          <p class="card-label">Total income</p>
+          <p class="card-value" id="totalIncome">0</p>
+        </div>
+        <div class="card expense">
+          <p class="card-label">Total expenses</p>
+          <p class="card-value" id="totalExpenses">0</p>
+        </div>
+        <div class="card balance">
+          <p class="card-label">Balance</p>
+          <p class="card-value" id="balance">0</p>
+        </div>
+      </div>
+
+      <div class="panels">
+        <!-- Category breakdown -->
+        <div class="panel">
+          <h2>Spending by category</h2>
+          <div id="categoryBars" class="bars"></div>
+        </div>
+
+        <!-- Monthly trend -->
+        <div class="panel">
+          <h2>Last 6 months</h2>
+          <div id="monthlyBars" class="monthly"></div>
+          <div class="legend">
+            <span><i class="swatch in"></i>Income</span>
+            <span><i class="swatch out"></i>Expenses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transactions -->
+      <div class="panel tx-panel">
+        <div class="tx-head">
+          <h2>Transactions</h2>
+          <button id="addBtn" class="btn btn-primary">+ Add transaction</button>
+        </div>
+
+        <div class="filters">
+          <select id="filterType" aria-label="Filter by type">
+            <option value="">All types</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <select id="filterCategory" aria-label="Filter by category">
+            <option value="">All categories</option>
+          </select>
+          <input type="date" id="filterFrom" aria-label="From date">
+          <input type="date" id="filterTo" aria-label="To date">
+          <button id="clearFilters" class="btn btn-ghost">Clear</button>
+        </div>
+
+        <div id="txList" class="tx-list"></div>
+        <p id="txEmpty" class="muted hidden">No transactions yet. Add your first one above.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Add/edit modal ===================== -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modalTitle">Add transaction</h2>
+        <button id="modalClose" class="btn btn-ghost" type="button">Close</button>
+      </div>
+      <form id="txForm" autocomplete="off">
+        <input type="hidden" id="txId">
+        <div class="type-toggle">
+          <button type="button" id="typeExpense" class="toggle active" data-kind="expense">Expense</button>
+          <button type="button" id="typeIncome" class="toggle" data-kind="income">Income</button>
+        </div>
+        <label>Amount
+          <input type="number" id="txAmount" min="0.01" step="0.01" required placeholder="0.00">
+        </label>
+        <label>Category
+          <select id="txCategory" required></select>
+        </label>
+        <label>Date
+          <input type="date" id="txDate" required>
+        </label>
+        <label>Note
+          <input type="text" id="txNote" placeholder="Optional note">
+        </label>
+        <p class="form-error" id="txError"></p>
+        <button class="btn btn-primary btn-block" type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p class="muted">TallyUp &middot; a full stack expense tracker built for the Auspify Technologies internship</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
