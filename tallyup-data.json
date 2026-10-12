@@ -1,0 +1,285 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Demo User",
+      "email": "demo@example.com",
+      "salt": "38ff9fa0cbfbd3c996394af95786781e",
+      "hash": "42e607febfd10f8441cb7aefe75b188eae752252c14a7a1726e3f644c1e83315f23fbc4adf1f87e6bda1658a7b15332f322a6c57a9b46a036fe350d3b4c2a62e",
+      "created_at": "2026-10-12T18:32:46.490Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "df2bf445bf7687222b4d6ba8e9a2bd6524c64a01c3c33b7e1d579c1418dba6b1",
+      "user_id": 1,
+      "created_at": "2026-10-12T18:33:17.439Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "type": "income",
+      "amount": 95000,
+      "category": "Salary",
+      "date": "2026-08-05",
+      "note": "Monthly salary",
+      "created_at": "2026-10-12T18:32:46.491Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "type": "income",
+      "amount": 95000,
+      "category": "Salary",
+      "date": "2026-09-05",
+      "note": "Monthly salary",
+      "created_at": "2026-10-12T18:32:46.491Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "type": "income",
+      "amount": 95000,
+      "category": "Salary",
+      "date": "2026-10-05",
+      "note": "Monthly salary",
+      "created_at": "2026-10-12T18:32:46.491Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "type": "income",
+      "amount": 12000,
+      "category": "Freelance",
+      "date": "2026-08-14",
+      "note": "Logo design for a local bakery",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "type": "income",
+      "amount": 8500,
+      "category": "Freelance",
+      "date": "2026-09-21",
+      "note": "Bug fixes on a client website",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "type": "income",
+      "amount": 15000,
+      "category": "Freelance",
+      "date": "2026-10-11",
+      "note": "Landing page for a startup",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 28000,
+      "category": "Rent",
+      "date": "2026-08-01",
+      "note": "Monthly apartment rent",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 28000,
+      "category": "Rent",
+      "date": "2026-09-01",
+      "note": "Monthly apartment rent",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 9,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 28000,
+      "category": "Rent",
+      "date": "2026-10-01",
+      "note": "Monthly apartment rent",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 3200,
+      "category": "Food",
+      "date": "2026-08-08",
+      "note": "Weekly groceries",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 11,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 1450,
+      "category": "Food",
+      "date": "2026-08-18",
+      "note": "Dinner with friends",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 12,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 3800,
+      "category": "Food",
+      "date": "2026-09-09",
+      "note": "Weekly groceries",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 13,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 950,
+      "category": "Food",
+      "date": "2026-09-23",
+      "note": "Lunch at the office",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 14,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 2900,
+      "category": "Food",
+      "date": "2026-10-07",
+      "note": "Weekly groceries",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 15,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 1750,
+      "category": "Food",
+      "date": "2026-10-16",
+      "note": "Biryani night",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 16,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 600,
+      "category": "Transport",
+      "date": "2026-08-12",
+      "note": "Careem ride to the market",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 17,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 2400,
+      "category": "Transport",
+      "date": "2026-09-06",
+      "note": "Fuel refill",
+      "created_at": "2026-10-12T18:32:46.492Z"
+    },
+    {
+      "id": 18,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 500,
+      "category": "Transport",
+      "date": "2026-10-09",
+      "note": "Bus fare for the week",
+      "created_at": "2026-10-12T18:32:46.500Z"
+    },
+    {
+      "id": 19,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 4100,
+      "category": "Utilities",
+      "date": "2026-08-20",
+      "note": "Electricity bill",
+      "created_at": "2026-10-12T18:32:46.509Z"
+    },
+    {
+      "id": 20,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 1800,
+      "category": "Utilities",
+      "date": "2026-09-22",
+      "note": "Internet bill",
+      "created_at": "2026-10-12T18:32:46.515Z"
+    },
+    {
+      "id": 21,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 3900,
+      "category": "Utilities",
+      "date": "2026-10-19",
+      "note": "Electricity bill",
+      "created_at": "2026-10-12T18:32:46.525Z"
+    },
+    {
+      "id": 22,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 2200,
+      "category": "Entertainment",
+      "date": "2026-09-27",
+      "note": "Cinema with family",
+      "created_at": "2026-10-12T18:32:46.531Z"
+    },
+    {
+      "id": 23,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 4500,
+      "category": "Shopping",
+      "date": "2026-10-13",
+      "note": "New pair of running shoes",
+      "created_at": "2026-10-12T18:32:46.537Z"
+    },
+    {
+      "id": 24,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 1200,
+      "category": "Health",
+      "date": "2026-08-25",
+      "note": "Pharmacy, flu medicine",
+      "created_at": "2026-10-12T18:32:46.543Z"
+    },
+    {
+      "id": 25,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 7500,
+      "category": "Shopping",
+      "date": "2026-09-15",
+      "note": "Winter jacket",
+      "created_at": "2026-10-12T18:32:46.549Z"
+    },
+    {
+      "id": 26,
+      "user_id": 1,
+      "type": "expense",
+      "amount": 2000,
+      "category": "Other",
+      "date": "2026-10-21",
+      "note": "Gift for a cousin",
+      "created_at": "2026-10-12T18:32:46.555Z"
+    }
+  ],
+  "seq": {
+    "user": 2,
+    "tx": 28
+  }
+}
